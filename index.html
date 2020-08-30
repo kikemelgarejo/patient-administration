@@ -2,11 +2,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <script> src="https://cdnjs.cloudflare.com/ajax/libs/node-uuid/1.4.8/uuid.min.js"</script>
     <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Patient Administration</title>
 </head>
 
@@ -15,7 +16,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="one-half-column">
+            <div class="one-half column">
 
                 <h2>Crear Cita médica</h2>
                 <div id="msj-error"></div>
@@ -60,19 +61,19 @@
                     
                     <button
                         type="button"
-                        class="u-full-width">
+                        class="u-full-width button-primary">
                         Agregar Cita
                     </button>
                 </form>
             </div>
 
-            <div class="one-half-column">
+            <div class="one-half column">
                 <h2>CITAS</h2>
                 <div id="citas"></div>
             </div>
 
         </div>
     </div>
-    
+
 </body>
 </html>
