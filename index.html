@@ -12,6 +12,63 @@
 
 <body>
     <h1>Administrador de pacientes</h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="one-half-column">
+
+                <h2>Crear Cita médica</h2>
+                <div id="msj-error"></div>
+
+                <form id="form">
+                    <label>Nombre Mascota</label>
+                    <input 
+                        type="text" 
+                        name="mascota" 
+                        id="mascota"
+                        class="u-full-width"
+                        placeholder="Nombre mascota" >
+
+                    <label>Nombre Dueño</label>
+                    <input 
+                        type="text" 
+                        name="propietario" 
+                        id="propietario"
+                        class="u-full-width"
+                        placeholder="Nombre Dueño de la mascota" >
+
+                    <label>Fecha</label>
+                    <input 
+                        type="date" 
+                        name="fecha" 
+                        id="fecha"
+                        class="u-full-width" >
+
+                    <label>Hora</label>
+                    <input 
+                        type="time" 
+                        name="hora" 
+                        id="hora"
+                        class="u-full-width" >
+
+                    <label>Síntomas</label>
+                    <textarea 
+                        name="sintomas" 
+                        id="sintomas"
+                        class="u-full-width">
+                    </textarea>
+                    
+                    <button
+                        type="button"
+                        class="u-full-width">
+                        Agregar Cita
+                    </button>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
     
 </body>
 </html>
