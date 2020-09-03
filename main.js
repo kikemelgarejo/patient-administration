@@ -1,6 +1,11 @@
 
 let citas=JSON.parse(localStorage.getItem("citas"));//recupera el arreglo que está guardado en el localStorage
 
+if(citas){
+    localStorage.setItem("citas",JSON.stringify(citas));
+}else{
+    localStorage.setItem("citas",JSON.stringify([]));
+}
 
 const agregarCita=()=>{
     let id=uuid.v1(); //usando librería para generar id único
@@ -18,12 +23,14 @@ const agregarCita=()=>{
     fecha.trim()===''||
     hora.trim()===''||
     sintomas.trim()===''){
-        mostrarError("#msj-error","Hay un campo incompleto");
+        mostrarError("#msj-error","favor rellenar todos los campos");
         return;
     }
 
     let nuevaCita={id,mascota,propietario,fecha,hora,sintomas} //guardando key, value de las variables
-
+    citas.push(nuevaCita);
+    localStorage.setItem("citas",JSON.stringify(citas));//se guarda como array en el localStorage
+    document.querySelector("#form").reset();//limpio el formulario
 }
 
 const mostrarError=(elemento, mensaje)=>{
