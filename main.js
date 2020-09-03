@@ -21,10 +21,10 @@ const visualizarCitas=()=>{
     citas.map(cita=>{ //iteración con .map para poder traer el valor de cada propiedad del objeto
         citasHTML+=`<div class="cita">
                         <p> Mascota: <span>${cita.mascota}</span></p>
-                        <p> Mascota: <span>${cita.propietario}</span></p>
-                        <p> Mascota: <span>${cita.fecha}</span></p>
-                        <p> Mascota: <span>${cita.hora}</span></p>
-                        <p> Mascota: <span>${cita.sintomas}</span></p>
+                        <p> Propietario: <span>${cita.propietario}</span></p>
+                        <p> Fecha: <span>${cita.fecha}</span></p>
+                        <p> Hora: <span>${cita.hora}</span></p>
+                        <p> Síntomas: <span>${cita.sintomas}</span></p>
         
                         <button class ="button eliminar u-full-width"
                         onclick="eliminarCita('${cita.id}')">Eliminar Cita 
