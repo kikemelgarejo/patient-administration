@@ -1,4 +1,7 @@
 
+let citas=JSON.parse(localStorage.getItem("citas"));//recupera el arreglo que está guardado en el localStorage
+
+
 const agregarCita=()=>{
     let id=uuid.v1(); //usando librería para generar id único
 
@@ -18,6 +21,9 @@ const agregarCita=()=>{
         mostrarError("#msj-error","Hay un campo incompleto");
         return;
     }
+
+    let nuevaCita={id,mascota,propietario,fecha,hora,sintomas} //guardando key, value de las variables
+
 }
 
 const mostrarError=(elemento, mensaje)=>{
