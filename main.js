@@ -7,6 +7,13 @@ if(citas){
     localStorage.setItem("citas",JSON.stringify([]));
 }
 
+const eliminarCita=(idCita)=>{
+    let citas=JSON.parse(localStorage.getItem("citas"));
+    const nuevasCitas=citas.filter(cita=>cita.id !== idCita); //filtra citas que tengan id diferente de la cita que quiero eliminar
+    localStorage.setItem("citas",JSON.stringify(nuevasCitas));//no se elimina del localStorage, si no que lo ingresa a un nuevo arrray llamado nuevasCitas
+    visualizarCitas();
+}
+
 const visualizarCitas=()=>{
     let citasHTML= ``;//se declara variable
     let citas=JSON.parse(localStorage.getItem("citas"));//recupero los valores del localStorage
@@ -20,7 +27,7 @@ const visualizarCitas=()=>{
                         <p> Mascota: <span>${cita.sintomas}</span></p>
         
                         <button class ="button eliminar u-full-width"
-                        onclick="eliminarCita(${cita.id})">Eliminar Cita 
+                        onclick="eliminarCita('${cita.id}')">Eliminar Cita 
                         </button>
                      </div>`;
     })
